@@ -228,7 +228,7 @@ def main(_):
   # 학습된 파라미터를 저장하기 위한 tf.train.CheckpointManager를 선언합니다.
   ckpt = tf.train.Checkpoint(model=DQN_model)
   ckpt_manager = tf.train.CheckpointManager(
-    ckpt, directory=os.getcwd(), max_to_keep=5, checkpoint_name='model.ckpt')
+    ckpt, directory=os.getcwd(), max_to_keep=100, checkpoint_name='model.ckpt')
 
   winCount = 0
 
